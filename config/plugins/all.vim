@@ -93,13 +93,6 @@ if dein#tap('denite.nvim')
 	endfunction
 endif
 
-if dein#tap('vim-lsp')
-	" Close preview window with Escape key
-	autocmd user_events User lsp_float_opened nmap <buffer> <silent> <Esc>
-		\ <Plug>(lsp-preview-close)
-	autocmd user_events User lsp_float_closed nunmap <buffer> <Esc>
-endif
-
 if dein#tap('defx.nvim')
 	nnoremap <silent> <LocalLeader>e
 		\ :<C-u>Defx -toggle `getcwd()` -buffer-name=tab`tabpagenr()`<CR>
