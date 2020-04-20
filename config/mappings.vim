@@ -31,11 +31,6 @@ nnoremap <CR> za
 " Focus the current fold by closing all others
 nnoremap <S-Return> zMzvzt
 
-" The plugin rhysd/accelerated-jk moves through display-lines in normal mode,
-" these mappings will move through display-lines in visual mode too.
-vnoremap j gj
-vnoremap k gk
-
 " Easier line-wise movement
 nnoremap gh g^
 nnoremap gl g$
