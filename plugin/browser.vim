@@ -170,7 +170,7 @@ function! s:parse_git_url(path)
 	echohl None
 endfunction
 
-function s:parse_hg_url(path)
+function! s:parse_hg_url(path)
 	" Mercurial: Parse URL
 	" TODO
 endfunction

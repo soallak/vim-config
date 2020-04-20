@@ -70,7 +70,6 @@ call s:source_file('config/plugins/all.vim')
 call s:source_file('config/general.vim')
 call s:source_file('config/filetype.vim')
 call s:source_file('config/mappings.vim')
-call s:source_file('config/theme.vim')
 
 " Load user custom local settings
 if filereadable($VIM_PATH . '/config/local.vim')
@@ -80,3 +79,4 @@ endif
 set secure
 
 " vim: set ts=2 sw=2 tw=80 noet :
+"
