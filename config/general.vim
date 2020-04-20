@@ -141,7 +141,7 @@ set shiftwidth=2    " Number of spaces to use in auto(indent)
 set softtabstop=-1  " Automatically keeps in sync with shiftwidth
 set smarttab        " Tab insert blanks according to 'shiftwidth'
 set autoindent      " Use same indenting on new lines
-" set smartindent     " Smart autoindenting on new lines
+set smartindent     " Smart autoindenting on new lines
 set shiftround      " Round indent to multiple of 'shiftwidth'
 
 if exists('&breakindent')
@@ -217,9 +217,10 @@ set noshowmode          " Don't show mode in cmd window
 set shortmess=aoOTI     " Shorten messages and don't show intro
 set scrolloff=2         " Keep at least 2 lines above/below
 set sidescrolloff=5     " Keep at least 5 lines left/right
-set nonumber            " Don't show line numbers
+set number              " show line numbers
 set noruler             " Disable default status ruler
 set list                " Show hidden characters
+set cursorline          " Show cursor line
 
 set showtabline=2       " Always show the tabs line
 set winwidth=30         " Minimum width for active window
