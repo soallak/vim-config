@@ -68,7 +68,6 @@ call s:source_file('config/plugins/all.vim')
 
 " Initialize all my configurations
 call s:source_file('config/general.vim')
-call s:source_file('config/filetype.vim')
 call s:source_file('config/mappings.vim')
 
 " Load user custom local settings
