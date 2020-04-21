@@ -31,20 +31,6 @@
 # ==========================================
 # Interface
 # ---------
-- repo: airblade/vim-gitgutter
-  on_event: FileType
-  hook_add: |
-    let g:gitgutter_map_keys = 0
-    let g:gitgutter_sign_added = '▎'
-    let g:gitgutter_sign_modified = '▎'
-    let g:gitgutter_sign_removed = '▍'
-    let g:gitgutter_sign_removed_first_line = '▘'
-    let g:gitgutter_sign_modified_removed = '▍'
-    let g:gitgutter_preview_win_floating = 1
-    let g:gitgutter_sign_allow_clobber = 0
-    let g:gitgutter_sign_priority = 0
-    let g:gitgutter_override_sign_column_highlight = 0
-
 - repo: noscript/vim-indent-guides
   on_event: VimEnter
   hook_post_source: IndentGuidesEnable
@@ -70,6 +56,14 @@
 - repo: neoclide/coc.nvim
   rev: release
   merged: 0
+  hook_source: source $VIM_PATH/config/plugins/coc.vim
+  hook_add: |
+    let g:coc_global_extensions = [
+      \ 'coc-clangd', 
+      \ 'coc-cmake',
+      \ 'coc-xml',
+      \ 'coc-yaml'
+      \ ]
 
 - repo: SirVer/ultisnips
   if: has('python3')
@@ -85,18 +79,6 @@
   on_event: FileType
   if: has('python3')
   merged: 0
-
-- repo: dense-analysis/ale
-  on_event: FileType
-  hook_add: |
-    let g:ale_disable_lsp = 0
-    let g:ale_echo_delay = 100
-    let g:ale_lint_delay = 1000
-    let g:ale_echo_msg_format = '%linter%: %code: %%s [%severity%]'
-    let g:ale_history_enabled = 0
-    let g:ale_sign_error = '✖'
-    let g:ale_sign_warning = 'ⁱ'
-    let g:ale_maximum_file_size = 500000
 
 - repo: Raimondi/delimitMate
   on_event: FileType

@@ -61,7 +61,7 @@ endif
 if filereadable($VIM_PATH . '/.vault.vim')
 	call s:source_file('.vault.vim')
 endif
-let g:elite_mode = 1
+let g:elite_mode = 0
 
 " Initialize plugin-manager and load main config files
 call s:source_file('config/init.vim')
@@ -79,4 +79,3 @@ endif
 set secure
 
 " vim: set ts=2 sw=2 tw=80 noet :
-"

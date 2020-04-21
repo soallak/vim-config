@@ -1,5 +1,5 @@
 " coc.nvim settings
-" ---
+
 
 " Don't load the defx-git plugin file, not needed
 let b:defx_git_loaded = 1
@@ -13,10 +13,6 @@ inoremap <silent><expr> <Tab>
 	\ coc#refresh()
 
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-
-inoremap <silent><expr> <CR> pumvisible() ? coc#_select_confirm() :
-	\ delimitMate#WithinEmptyPair() ? "\<C-R>=delimitMate#ExpandReturn()\<CR>" :
-	\"\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 function! s:check_back_space() abort
 	let col = col('.') - 1

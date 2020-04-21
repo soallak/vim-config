@@ -60,20 +60,6 @@ if dein#tap('delimitMate')
 	imap <buffer><expr> <C-Tab> delimitMate#JumpAny()
 endif
 
-if dein#tap('ale')
-	nmap <silent> [c <Plug>(ale_previous)
-	nmap <silent> ]c <Plug>(ale_next)
-endif
-
-if dein#tap('vim-gitgutter')
-	nmap ]g <Plug>(GitGutterNextHunk)
-	nmap [g <Plug>(GitGutterPrevHunk)
-	nmap gS <Plug>(GitGutterStageHunk)
-	xmap gS <Plug>(GitGutterStageHunk)
-	nmap <Leader>gr <Plug>(GitGutterUndoHunk)
-	nmap gs <Plug>(GitGutterPreviewHunk)
-endif
-
 if dein#tap('committia.vim')
 	let g:committia_hooks = {}
 	function! g:committia_hooks.edit_open(info)
@@ -84,6 +70,24 @@ if dein#tap('committia.vim')
 		resize 10
 		startinsert
 	endfunction
+endif
+
+if dein#tap('coc.nvim')
+	nnoremap <silent> <Leader>a  :<C-u>CocList diagnostics<cr>
+	" Manage extensions.
+	nnoremap <silent> <Leader>e  :<C-u>CocList extensions<cr>
+	" Show commands.
+	nnoremap <silent> <Leader>c  :<C-u>CocList commands<cr>
+	" Find symbol of current document.
+	nnoremap <silent> <Leader>o  :<C-u>CocList outline<cr>
+	" Search workLeader symbols.
+	nnoremap <silent> <Leader>s  :<C-u>CocList -I symbols<cr>
+	" Do default action for next item.
+	nnoremap <silent> <Leader>j  :<C-u>CocNext<CR>
+	" Do default action for previous item.
+	nnoremap <silent> <Leader>k  :<C-u>CocPrev<CR>
+	" Resume latest coc list.
+	nnoremap <silent> <Leader>p  :<C-u>CocListResume<CR>
 endif
 
 " vim: set ts=2 sw=2 tw=80 noet :
