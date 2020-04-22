@@ -41,10 +41,6 @@ nmap [l :lprev<CR>
 nmap ]q :cnext<CR>
 nmap [q :cprev<CR>
 
-" Whitespace jump (see plugin/whitespace.vim)
-nnoremap ]w :<C-u>WhitespaceNext<CR>
-nnoremap [w :<C-u>WhitespacePrev<CR>
-
 " Navigation in command line
 cnoremap <C-h> <Home>
 cnoremap <C-l> <End>
@@ -247,19 +243,6 @@ nmap <silent> <Leader>h
 " Source line and selection in vim
 vnoremap <Leader>S y:execute @@<CR>:echo 'Sourced selection.'<CR>
 nnoremap <Leader>S ^vg_y:execute @@<CR>:echo 'Sourced line.'<CR>
-
-" Context-aware action-menu, neovim only (see plugin/actionmenu.vim)
-if has('nvim')
-	nmap <silent> <LocalLeader>c :<C-u>ActionMenu<CR>
-endif
-
-" Session management shortcuts (see plugin/sessions.vim)
-nmap <Leader>se :<C-u>SessionSave<CR>
-nmap <Leader>sl :<C-u>SessionLoad<CR>
-
-" Open SCM website
-nmap <Leader>o :<C-u>OpenSCM<CR>
-vmap <Leader>o :OpenSCM<CR>
 
 if has('mac')
 	" Open the macOS dictionary on current word
