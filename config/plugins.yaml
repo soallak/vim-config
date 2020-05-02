@@ -52,6 +52,25 @@
 # ==========================================
 # Completion and code analysis
 # ----------
+#
+
+- repo: lervag/vimtex
+  on_ft: tex
+  hook_add: |
+    let g:tex_flavor = "latex"
+    let g:vimtex_enabled = 1
+    let g:vimtex_view_method = 'general'
+    let g:vimtex_view_general_viewer = 'evince'
+    let g:vimtex_compiler_latexmk = {'callback': 0, 'options':['-pdf']}
+    let g:vimtex_complete_enabled = 1
+    let g:vimtex_quick_fix_mode=0
+
+
+- repo: honza/vim-snippets
+  depends: ultisnips
+  on_event: FileType
+  if: has('python3')
+  merged: 0
 
 - repo: neoclide/coc.nvim
   rev: release
@@ -62,24 +81,10 @@
       \ 'coc-clangd', 
       \ 'coc-cmake',
       \ 'coc-json',
+      \ 'coc-vimtex',
       \ 'coc-xml',
       \ 'coc-yaml'
       \ ]
-
-- repo: SirVer/ultisnips
-  if: has('python3')
-  on_event: FileType
-  hook_add: |
-    let g:UltiSnipsExpandTrigger = '<C-l>'
-    let g:UltiSnipsListSnippets = ''
-    let g:UltiSnipsJumpForwardTrigger = '<C-f>'
-    let g:UltiSnipsJumpBackwardTrigger = '<C-b>'
-
-- repo: honza/vim-snippets
-  depends: ultisnips
-  on_event: FileType
-  if: has('python3')
-  merged: 0
 
 - repo: Raimondi/delimitMate
   on_event: FileType
@@ -96,6 +101,16 @@
       au FileType tex let b:delimitMate_matchpairs = "(:),[:],{:},`:'"
       au FileType python let b:delimitMate_nesting_quotes = ['"', "'"]
     augroup END
+
+- repo: SirVer/ultisnips
+  if: has('python3')
+  on_event: FileType
+  hook_add: |
+    let g:UltiSnipsExpandTrigger = '<C-l>'
+    let g:UltiSnipsListSnippets = ''
+    let g:UltiSnipsJumpForwardTrigger = '<C-f>'
+    let g:UltiSnipsJumpBackwardTrigger = '<C-b>'
+
 
 # ==========================================
 # Denite
