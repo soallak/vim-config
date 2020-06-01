@@ -105,11 +105,11 @@ xnoremap <S-Tab> <gv
 nmap >>  >>_
 nmap <<  <<_
 
-" Drag current line/s vertically and auto-indent
-nnoremap <Leader>k :m-2<CR>
-nnoremap <Leader>j :m+<CR>
-vnoremap <Leader>k :m'<-2<CR>gv=gv
-vnoremap <Leader>j :m'>+<CR>gv=gv
+"" Drag current line/s vertically and auto-indent
+"nnoremap <Leader>k :m-2<CR>
+"nnoremap <Leader>j :m+<CR>
+"vnoremap <Leader>k :m'<-2<CR>gv=gv
+"vnoremap <Leader>j :m'>+<CR>gv=gv
 
 " Duplicate lines
 nnoremap <Leader>d m`YP``

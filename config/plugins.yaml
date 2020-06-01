@@ -79,7 +79,7 @@
   hook_add: |
     let g:coc_global_extensions = [
       \ 'coc-clangd',
-        \ 'coc-css',
+      \ 'coc-css',
       \ 'coc-cmake',
       \ 'coc-html',
       \ 'coc-json',
