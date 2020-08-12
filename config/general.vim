@@ -285,3 +285,6 @@ endif
 " }}}
 
 " vim: set foldmethod=marker ts=2 sw=2 tw=80 noet :
+"
+let g:color_name="angr"
+silent! execute 'colorschem' g:color_name
