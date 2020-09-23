@@ -11,5 +11,31 @@
                 "systemverilog"
             ]
         }
-    }
+    },
+
+	"python" : {
+		"setInterpreter" : "/usr/bin/python3",
+		"jediEnabled" : "true",
+
+		"analysis" : {
+			"diagnosticEnabled" : "true",
+			"logLevel" : "Warning"
+
+		},
+
+		"autocomplete" : {
+			"showAdvancedMembers" : "true"
+		},
+
+		"formating" : {
+			"provider": "flake8"
+
+		},
+
+		"linting" : {
+			"enabled" : "true",
+			"flake8Enabled" : "true",
+			"linkOnSave" : "true"
+		}
+	}
 }
