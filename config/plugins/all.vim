@@ -89,5 +89,3 @@ if dein#tap('coc.nvim')
 	" Resume latest coc list.
 	nnoremap <silent> <Leader>p  :<C-u>CocListResume<CR>
 endif
-
-" vim: set ts=2 sw=2 tw=80 noet :

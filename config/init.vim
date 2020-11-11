@@ -386,5 +386,3 @@ function! s:test_python_yaml()
 endfunction
 
 call s:main()
-
-" vim: set ts=2 sw=2 tw=80 noet :

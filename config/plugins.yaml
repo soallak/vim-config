@@ -7,20 +7,15 @@
 # -------
 - repo: Shougo/dein.vim
 - { repo: rafi/awesome-vim-colorschemes, merged: 0 }
-
+  #
 # Vim8 only:
 - { repo: roxma/nvim-yarp, if: "! has('nvim')", depends: vim-hug-neovim-rpc }
 - { repo: roxma/vim-hug-neovim-rpc, if: "! has('nvim')" }
 
-# Lazy Loading
 # ==========================================
-
-# Languages
-# ---------
-
-# ==========================================
-# Commands
+# Plugins
 # --------
+
 - repo: Shougo/defx.nvim
   on_cmd: Defx
   hook_source: source $VIM_PATH/config/plugins/defx.vim
@@ -28,12 +23,8 @@
 - { repo: kristijanhusak/defx-git, on_source: defx.nvim }
 - { repo: kristijanhusak/defx-icons, on_source: defx.nvim }
 
-# ==========================================
-# Interface
-# ---------
-- repo: noscript/vim-indent-guides
+- repo: nathanaelkane/vim-indent-guides
   on_event: VimEnter
-  hook_post_source: IndentGuidesEnable
   hook_add: |
     let g:indent_guides_default_mapping = 0
     let g:indent_guides_tab_guides = 0
@@ -49,10 +40,10 @@
   on_path: [ COMMIT_EDITMSG, MERGE_MSG ]
   hook_source: let g:committia_min_window_width = 70
 
-# ==========================================
-# Completion and code analysis
-# ----------
-#
+- repo: iamcco/markdown-preview.nvim
+  hook_source: source $VIM_PATH/config/plugins/markdown_preview.vim
+  on_ft: ['markdown', 'pandoc.markdown', 'rmd']
+  build: 'sh -c "cd app && npm install"'
 
 - repo: lervag/vimtex
   on_ft: tex
@@ -64,13 +55,6 @@
     let g:vimtex_compiler_latexmk = {'callback': 0, 'options':['-pdf']}
     let g:vimtex_complete_enabled = 1
     let g:vimtex_quick_fix_mode=0
-
-
-- repo: honza/vim-snippets
-  depends: ultisnips
-  on_event: FileType
-  if: has('python3')
-  merged: 0
 
 - repo: neoclide/coc.nvim
   rev: release
@@ -104,28 +88,8 @@
       au FileType python let b:delimitMate_nesting_quotes = ['"', "'"]
     augroup END
 
-- repo: SirVer/ultisnips
-  if: has('python3')
-  on_event: FileType
-  hook_add: |
-    let g:UltiSnipsExpandTrigger = '<C-l>'
-    let g:UltiSnipsListSnippets = ''
-    let g:UltiSnipsJumpForwardTrigger = '<C-f>'
-    let g:UltiSnipsJumpBackwardTrigger = '<C-b>'
-
-
-# ==========================================
-# Denite
-# ------
 - repo: Shougo/denite.nvim
   on_cmd: Denite
   trusted: 1
   hook_source: source $VIM_PATH/config/plugins/denite.vim
 
-# ==========================================
-# Operators
-# ---------
-
-# ==========================================
-# Text objects
-# ------------
