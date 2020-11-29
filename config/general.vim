@@ -12,10 +12,12 @@ set fileformats=unix,dos,mac " Use Unix as the standard file type
 set magic                    " For regular expressions turn magic on
 set path+=**                 " Directories to search when using gf and friends
 set isfname-==               " Remove =, detects filename in var=/foo/bar
-set virtualedit=block        " Position cursor anywhere in visual block
 set synmaxcol=2500           " Don't syntax highlight long lines
+set showmatch
+set virtualedit=block        " Position cursor anywhere in visual block
 set formatoptions+=1         " Don't break lines after a one-letter word
 set formatoptions-=t         " Don't auto-wrap text
+set formatoptions+=l         " Don't wrap already exitings long lines
 set formatoptions-=o         " Disable comment-continuation (normal 'o'/'O')
 if has('patch-7.3.541')
 	set formatoptions+=j       " Remove comment leader when joining lines
@@ -183,7 +185,7 @@ endif
 " }}}
 " Behavior {{{
 " --------
-set nowrap                      " No wrap by default
+set wrap                        " wrap by default
 set linebreak                   " Break long lines at 'breakat'
 set breakat=\ \	;:,!?           " Long lines break chars
 set nostartofline               " Cursor in same column for few commands
@@ -286,5 +288,5 @@ endif
 
 " vim: set foldmethod=marker ts=2 sw=2 tw=80 noet :
 "
-let g:color_name="gruvbox"
+let g:color_name="deus"
 silent! execute 'colorschem' g:color_name
