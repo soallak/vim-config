@@ -15,16 +15,16 @@
 
 	"python" : {
 		"setInterpreter" : "/usr/bin/python3",
-		"jediEnabled" : "true",
+		"jediEnabled" : true,
 
 		"analysis" : {
-			"diagnosticEnabled" : "true",
+			"diagnosticEnabled" : true,
 			"logLevel" : "Warning"
 
 		},
 
 		"autocomplete" : {
-			"showAdvancedMembers" : "true"
+			"showAdvancedMembers" : true
 		},
 
 		"formating" : {
@@ -33,12 +33,25 @@
 		},
 
 		"linting" : {
-			"enabled" : "true",
-			"flake8Enabled" : "true",
-			"linkOnSave" : "true"
+			"enabled" : true,
+			"flake8Enabled" : true,
+			"linkOnSave" : true
 		}
 	},
-	"yaml.schemas": {
-      "kubernetes": "/*.yaml"
+	"yaml": { 
+		"schemas": {
+			"kubernetes": "/*.yaml"
+		}
+	},
+	"clangd": {
+		"enabled": true,
+		"arguments": [],
+		"disableDiagnostics": false,
+		"disableSnippetCompletion": false,
+		"compilationDatabasePath": "",
+		"fallbackFlags":[],
+		"semanticHighlighting": true,
+		"serverCompletionRanking": true,
+		"path": "/usr/bin/clangd-10"
 	}
 }

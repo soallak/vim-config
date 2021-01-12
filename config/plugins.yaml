@@ -36,6 +36,11 @@
       \ 'lsp-hover', 'clap_input'
       \ ]
 
+- repo: jackguo380/vim-lsp-cxx-highlight
+  on_ft: ['cpp']
+  hook_add: |
+    let g:lsp_cxx_hl_use_text_props = 1
+
 - repo: rhysd/committia.vim
   on_path: [ COMMIT_EDITMSG, MERGE_MSG ]
   hook_source: let g:committia_min_window_width = 70
