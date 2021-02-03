@@ -20,8 +20,9 @@
   on_cmd: Defx
   hook_source: source $VIM_PATH/config/plugins/defx.vim
 
-- { repo: kristijanhusak/defx-git, on_source: defx.nvim }
-- { repo: kristijanhusak/defx-icons, on_source: defx.nvim }
+- repo: kristijanhusak/defx-git
+
+- repo: kristijanhusak/defx-icons
 
 - repo: nathanaelkane/vim-indent-guides
   on_event: VimEnter
@@ -97,4 +98,3 @@
   on_cmd: Denite
   trusted: 1
   hook_source: source $VIM_PATH/config/plugins/denite.vim
-

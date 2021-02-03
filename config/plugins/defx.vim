@@ -209,5 +209,3 @@ function! s:find_file_explorer() abort
 	endif
 	return s:file_explorer
 endfunction
-
-" vim: set ts=2 sw=2 tw=80 noet :
