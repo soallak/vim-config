@@ -104,3 +104,7 @@
     let g:localvimrc_name = ['.lvimrc', '.vimrc']
     let g:localvimrc_ask = 1
     let g:localvimrc_debug = 1
+
+- repo: luochen1990/rainbow
+  hook_source: |
+    let g:rainbow_active = 1
