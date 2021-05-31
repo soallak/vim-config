@@ -102,9 +102,13 @@
 - repo: embear/vim-localvimrc
   hook_source: |
     let g:localvimrc_name = ['.lvimrc', '.vimrc']
-    let g:localvimrc_ask = 1
+    let g:localvimrc_ask = 0
     let g:localvimrc_debug = 1
 
 - repo: luochen1990/rainbow
   hook_source: |
     let g:rainbow_active = 1
+
+- repo: tikhomirov/vim-glsl
+  hook_source: |
+    autocmd! BufNewFile,BufRead *.frag,*.vert set ft=glsl

@@ -52,6 +52,6 @@
 		"fallbackFlags":[],
 		"semanticHighlighting": true,
 		"serverCompletionRanking": true,
-		"path": "/usr/bin/clangd-10"
+		"path": "/usr/bin/clangd"
 	}
 }
