@@ -1,6 +1,5 @@
 " coc.nvim settings
 
-
 " Don't load the defx-git plugin file, not needed
 let b:defx_git_loaded = 1
 

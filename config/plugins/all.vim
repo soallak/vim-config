@@ -28,11 +28,6 @@ if dein#tap('denite.nvim')
 		\ ":\<C-u>DeniteCursorWord -no-start-filter -search line/external\<CR>"
 		\ : ":\<C-u>DeniteCursorWord -no-start-filter -search line\<CR>"
 
-	" chemzqm/denite-git
-	nnoremap <silent> <Leader>gl :<C-u>Denite gitlog:all -no-start-filter<CR>
-	nnoremap <silent> <Leader>gs :<C-u>Denite gitstatus -no-start-filter<CR>
-	nnoremap <silent> <Leader>gc :<C-u>Denite gitbranch -no-start-filter<CR>
-
 	" Open Denite with word under cursor or selection
 	nnoremap <silent> <Leader>gt :DeniteCursorWord tag:include -no-start-filter -immediately<CR>
 	nnoremap <silent> <Leader>gf :DeniteCursorWord file/rec -no-start-filter<CR>
