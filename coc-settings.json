@@ -13,21 +13,21 @@
         }
     },
 
-	"yaml": { 
-		"schemas": {
-			"kubernetes": "/*.yaml"
-		}
-	},
+  "yaml": { 
+    "schemas": {
+      "kubernetes": "/*.yaml"
+    }
+  },
 
-	"clangd": {
-		"enabled": true,
-		"arguments": [],
-		"disableDiagnostics": false,
-		"disableSnippetCompletion": false,
-		"compilationDatabasePath": "",
-		"fallbackFlags":[],
-		"semanticHighlighting": true,
-		"serverCompletionRanking": true,
-		"path": "/usr/bin/clangd"
-	}
+  "clangd": {
+    "enabled": true,
+    "arguments": ["--clang-tidy", "--fallback-style=Google", "--enable-config"],
+    "disableDiagnostics": false,
+    "disableSnippetCompletion": false,
+    "compilationDatabasePath": "",
+    "fallbackFlags":[],
+    "semanticHighlighting": false,
+    "serverCompletionRanking": true,
+    "path": "/usr/bin/clangd"
+  }
 }

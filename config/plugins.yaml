@@ -92,7 +92,7 @@
 
 - repo: embear/vim-localvimrc
   hook_source: |
-    let g:localvimrc_name = ['.lvimrc', '.vimrc']
+    let g:localvimrc_name = ['.lvimrc', '.vimrc', '.vim/vimrc']
     let g:localvimrc_ask = 0
     let g:localvimrc_debug = 1
 
