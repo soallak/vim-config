@@ -19,9 +19,7 @@
 - repo: Shougo/defx.nvim
   on_cmd: Defx
   hook_source: source $VIM_PATH/config/plugins/defx.vim
-
 - repo: kristijanhusak/defx-git
-
 - repo: kristijanhusak/defx-icons
 
 - repo: nathanaelkane/vim-indent-guides
@@ -36,11 +34,6 @@
       \ 'vista', 'vista_kind', 'tagbar', 'nerdtree',
       \ 'lsp-hover', 'clap_input'
       \ ]
-
-- repo: jackguo380/vim-lsp-cxx-highlight
-  on_ft: ['cpp']
-  hook_add: |
-    let g:lsp_cxx_hl_use_text_props = 1
 
 - repo: rhysd/committia.vim
   on_path: [ COMMIT_EDITMSG, MERGE_MSG ]
@@ -69,10 +62,8 @@
   hook_add: |
     let g:coc_global_extensions = [
       \ 'coc-clangd',
-      \ 'coc-css',
       \ 'coc-cmake',
-      \ 'coc-html',
-      \ 'coc-json',
+      \ 'coc-java',
       \ 'coc-vimtex',
       \ 'coc-xml',
       \ 'coc-yaml'
